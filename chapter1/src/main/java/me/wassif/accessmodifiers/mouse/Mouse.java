@@ -1,6 +1,6 @@
-package me.wassif.chapter1.accessmodifiers.mouse;
+package me.wassif.accessmodifiers.mouse;
 
-import me.wassif.chapter1.accessmodifiers.cat.BigCat;
+import me.wassif.accessmodifiers.cat.BigCat;
 
 public class Mouse {
 	public static void main(String[] args) {

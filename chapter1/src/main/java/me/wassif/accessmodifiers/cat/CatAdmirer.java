@@ -1,4 +1,4 @@
-package me.wassif.chapter1.accessmodifiers.cat;
+package me.wassif.accessmodifiers.cat;
 
 public class CatAdmirer {
 	public static void main(String[] args) {

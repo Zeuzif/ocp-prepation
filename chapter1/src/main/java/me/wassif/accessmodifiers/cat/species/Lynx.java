@@ -1,6 +1,6 @@
-package me.wassif.chapter1.accessmodifiers.cat.species;
+package me.wassif.accessmodifiers.cat.species;
 
-import me.wassif.chapter1.accessmodifiers.cat.BigCat;
+import me.wassif.accessmodifiers.cat.BigCat;
 
 public class Lynx extends BigCat {
 	public static void main(String[] args) {
