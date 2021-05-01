@@ -22,3 +22,7 @@ for making a class immutable:
 3. Don't define any setter method
 4. Don't allow referenced mutable object to be accessed or modified directly
 5. Prevent methods from being overriden
+
+The problem of a constructor growing too large actually has a name, referred to as the
+telescoping constructor anti‐pattern.
+
