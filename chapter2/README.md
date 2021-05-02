@@ -16,6 +16,7 @@ The immutable object pattern is a creational pattern based on the idea of
 creating objects whose state does not change after they are created and can be easily shared
 across multiple classes
 
+immutable class pattern\
 for making a class immutable:
 1. Use a constructor to set all properties of the object
 2. Mark all instance vars private final
@@ -23,6 +24,13 @@ for making a class immutable:
 4. Don't allow referenced mutable object to be accessed or modified directly
 5. Prevent methods from being overriden
 
+builder pattern\
 The problem of a constructor growing too large actually has a name, referred to as the
 telescoping constructor anti‐pattern.
+
+factory pattern\
+How do we write code that creates objects in which the precise type of the object
+may not be known until runtime?
+
+
 
