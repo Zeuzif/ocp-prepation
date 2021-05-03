@@ -1,7 +1,9 @@
 ### ![java](etc/java.png) ocp_prepation
 
-#### chapter 1 : advanced class design
+#### Chapter 1 : advanced class design
 
-#### chapter 2 : Design Patterns and Principles
+#### Chapter 2 : design patterns and principles
+
+#### Chapter 3 : generics and collections
 
 
