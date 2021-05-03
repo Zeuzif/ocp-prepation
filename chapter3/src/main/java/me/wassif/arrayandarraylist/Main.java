@@ -14,6 +14,7 @@ public class Main {
         array[0] = "new";
         System.out.println(list); // [new, test]
         String[] array2 = (String[]) list.toArray();
+        printArray(array2);
         list.remove(0); // throws UnsupportedOperationException
     }
 
