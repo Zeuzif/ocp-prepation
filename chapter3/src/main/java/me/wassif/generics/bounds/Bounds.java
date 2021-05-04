@@ -1,15 +1,42 @@
 package me.wassif.generics.bounds;
 
-import java.io.FileNotFoundException;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+class A {
+}
+
+class B extends A {
+}
+
+class C extends B {
+}
+
+class D extends C {
+}
+
 public class Bounds {
     public static void main(String[] args) {
-        List<? super IOException> exceptions = new ArrayList<Exception>();
-        // exceptions.add(new Exception()); // Does not compile
-        exceptions.add(new IOException());
-        exceptions.add(new FileNotFoundException());
+        // when we work with upper bounds or unbounded wildcards
+        // The list becomes logically immutable
+        // Unbounded Wildcards
+        @SuppressWarnings("unused")
+        List<?> listc = new ArrayList<C>();
+        // listc.add(new D()); // does not compile
+        // Lower bounded list
+        List<? extends A> listb = new ArrayList<B>();
+        List<B> mlistb = new ArrayList<B>();
+        mlistb.add(new B());
+        mlistb.add(new C());
+        mlistb.add(new D());
+        listb = mlistb;
+        // listb.add(new D()); // Does not compile
+        listb.remove(0);
+        System.out.println(listb);
+        // Upper bounded
+        List<? super C> lista = new ArrayList<A>();
+        // lista.add(new B()); // Does not compile
+        lista.add(new C());
+        lista.add(new D());
     }
 }

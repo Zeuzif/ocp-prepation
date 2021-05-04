@@ -29,3 +29,30 @@ can use the wrapper class instead. If you want a type of int, just use Integer.\
 type is linked to the instance of the class.
 
 A `bounded parameter type` is a generic type that specifies a bound for the generic.
+
+Imagine a situation:
+```
+public static void main(String[] args) {
+    List<String> keywords = new ArrayList<String>();
+    keywords.add("Hello");
+    printList(keywords); // does not compile
+}
+
+public static void printList(List<Object> list) {
+    for (Object object : list) {
+        System.out.println(object);
+    }
+}
+```
+it's seems logical but it's wrong, why? if compiler allow us to do that the code bellow will compile
+```
+4: List<String> strings = new ArrayList<>();
+5: strings.add("Hello");
+6: List<Object> objects = strings; // does not compile
+7: objects.add(1);
+8: System.out.println(numbers.get(1));
+```
+On line 4, the compiler promises us that only String objects will appear in strings. If
+line 6 were to have compiled, line 7 would break that promise by putting an Integer in there
+since strings and objects are references to the same object. Good thing that the compiler
+prevents this :).
