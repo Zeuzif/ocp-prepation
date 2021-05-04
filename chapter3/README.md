@@ -28,3 +28,4 @@ can use the wrapper class instead. If you want a type of int, just use Integer.\
 ■ Create a static variable as a generic type parameter. This is not allowed because the
 type is linked to the instance of the class.
 
+A `bounded parameter type` is a generic type that specifies a bound for the generic.
