@@ -39,4 +39,17 @@ public class Bounds {
         lista.add(new C());
         lista.add(new D());
     }
+
+    public <T extends A> T identity(T t) {
+        return t;
+    }
+
+    public void printList(List<? super C> list) {
+    }
+
+    // parameter type B hide the type B
+    @SuppressWarnings("hiding")
+    public <B> B func(List<? extends B> list) {
+        return null;
+    }
 }
