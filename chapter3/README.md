@@ -56,3 +56,6 @@ On line 4, the compiler promises us that only String objects will appear in stri
 line 6 were to have compiled, line 7 would break that promise by putting an Integer in there
 since strings and objects are references to the same object. Good thing that the compiler
 prevents this :).
+
+#### Collections
+

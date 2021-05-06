@@ -1,7 +1,10 @@
 package me.wassif.generics;
 
 class Crate<T> {
+    // private static T var; //this is not allowed
     private T content;
+    private T[] elements; // cannot instantiate this with new because arrays are
+                          // covariant
 
     public T getContent() {
         return content;
