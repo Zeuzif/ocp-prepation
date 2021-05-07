@@ -1,4 +1,9 @@
-### ![java](etc/java.png) ocp_prepation
+### ocp_prepation
+
+<details>
+For each chapter, notes will be found in readme related to this chapter
+</details>
+<br />
 
 #### Chapter 1 : advanced class design
 
