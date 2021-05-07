@@ -5,7 +5,7 @@ import java.util.HashSet;
 import java.util.Set;
 import java.util.TreeSet;
 
-public class SetImplementations {
+public class SetImplementation {
 	public static void main(String[] args) {
 		// O(1) search // O(1) insert
 		// we loose to order
