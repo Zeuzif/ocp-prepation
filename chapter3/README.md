@@ -59,3 +59,5 @@ prevents this :).
 
 #### Collections
 
+For collections that are based on HashTable, Java use `hashCode()` to know in which bucket to look in. after that Java check equality of objects with `equals()`.
+
