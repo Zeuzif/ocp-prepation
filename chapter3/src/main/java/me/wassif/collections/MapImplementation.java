@@ -3,13 +3,12 @@ package me.wassif.collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.TreeMap;
-import java.util.stream.Stream;
 
 public class MapImplementation {
 	public static void main(String[] args) {
 		// not sorted
 		// O(1) search O(1) insert
-		Map<Keyword, String[]> hashMap = new HashMap<>(3);
+		Map<Keyword, String[]> hashMap = new HashMap<>();
 		hashMap.put(new Keyword("int"), new String[] { "int", "INT" });
 		hashMap.put(new Keyword("long"), new String[] { "int", "LONG" });
 		hashMap.put(new Keyword("short"), new String[] { "int", "SHORT" });
@@ -46,6 +45,6 @@ class Keyword {
 	@Override
 	public String toString() {
 		int h;
-		return value + " hash : " + ((hashCode() ^ hashCode() >>> 16)) % 3;
+		return value + " hash : " + ((hashCode() ^ hashCode() >>> 16));
 	}
 }
