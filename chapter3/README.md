@@ -61,7 +61,7 @@ prevents this :).
 
 For collections that are based on HashTable, Java use `hashCode()` to know in which bucket to look in. after that Java check equality of objects with `equals()`.
 
-Comparison of Comparable and Comparator:\
+Comparison of Comparable and Comparator:
 | Difference | Comparable | Comparator |
 |------------|------------|------------|
 | package name | java.lang | java.util |
@@ -70,5 +70,22 @@ Comparison of Comparable and Comparator:\
 | number of parameters | 1 | 2 |
 | common to declare using lambda | no | yes |
 
-
+There are four type of method references:
+1- static methods
+```
+Consumer<List<Integer>> consumer = Collections::sort;
+```
+2- instance methods on specific instance
+```
+String str = "Hello word";
+Predicate<String> pedicate = str::isEmpty;
+```
+3- instance methods on an instance to be determined on runtime
+```
+Predicate<String> pedicate = String::startsWith;
+```
+4- constructors
+```
+Supplier<ArrayList> supplier = ArrayList::new;
+```
 
