@@ -70,7 +70,7 @@ Comparison of Comparable and Comparator:
 | number of parameters | 1 | 2 |
 | common to declare using lambda | no | yes |
 
-There are four type of method references:
+There are four type of method references:\
 1- static methods
 ```
 Consumer<List<Integer>> consumer = Collections::sort;
