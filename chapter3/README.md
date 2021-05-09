@@ -61,3 +61,14 @@ prevents this :).
 
 For collections that are based on HashTable, Java use `hashCode()` to know in which bucket to look in. after that Java check equality of objects with `equals()`.
 
+Comparison of Comparable and Comparator:\
+| Difference | Comparable | Comparator |
+|------------|------------|------------|
+| package name | java.lang | java.util |
+| interface must be implemetend by class comparing | yes | no |
+| method name in interface | compareTo() | compare'() |
+| number of parameters | 1 | 2 |
+| common to declare using lambda | no | yes |
+
+
+
