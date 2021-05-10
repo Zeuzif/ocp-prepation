@@ -10,4 +10,6 @@ For each chapter, notes will be found in readme related to this chapter
 
 #### Chapter 3 : generics and collections
 
+#### chapter 4 : functionnal programming
+
 
