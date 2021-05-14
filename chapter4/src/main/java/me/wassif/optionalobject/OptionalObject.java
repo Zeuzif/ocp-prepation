@@ -1,4 +1,4 @@
-package me.wassif.functionalinterface;
+package me.wassif.optionalobject;
 
 import java.util.Optional;
 
