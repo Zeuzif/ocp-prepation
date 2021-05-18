@@ -1,4 +1,4 @@
-package me.wassif.streams.generate;
+package me.wassif.streams.terminal;
 
 import java.util.Optional;
 import java.util.stream.Stream;
