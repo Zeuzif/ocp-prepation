@@ -1,5 +1,6 @@
 package me.wassif.streams;
 
+import java.util.Optional;
 import java.util.OptionalDouble;
 import java.util.stream.Collectors;
 import java.util.stream.DoubleStream;
@@ -19,5 +20,13 @@ public class PrimitiveStream {
 		OptionalDouble result = marks.average();
 		double res = result.orElseGet(() -> Double.NaN);
 		System.out.println(res);
+		// chaining optionals
+		Optional<String> strOpt = Optional.empty();
+		Optional<Integer> intOpt = strOpt.flatMap(PrimitiveStream::calculate);
+		intOpt.ifPresent(x -> System.out.println(x));
+	}
+
+	private static Optional<Integer> calculate(String str) {
+		return str == null ? Optional.empty() : Optional.of(str.length());
 	}
 }
