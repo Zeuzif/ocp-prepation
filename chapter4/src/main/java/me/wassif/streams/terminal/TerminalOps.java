@@ -1,5 +1,6 @@
 package me.wassif.streams.terminal;
 
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -30,17 +31,31 @@ public class TerminalOps {
 		System.out.println(any.get());
 		// test reduce terminal op
 		reduce1();
+		printLine();
 		// test collect
 		collect1();
+		printLine();
 		// using collector
 		collect2();
+		printLine();
 		// using to map
 		toMap();
 		toMap2();
+		printLine();
 		// using group
 		group();
+		printLine();
 		// using partition
 		partitioning();
+		printLine();
+		// complicated
+		countingWhenCollecting();
+		printLine();
+		mappingWhenCollecting();
+	}
+
+	private static void printLine() {
+		System.out.println("-------------------------------------------------------------------------------------");
 	}
 
 	// take binary operator
@@ -87,6 +102,19 @@ public class TerminalOps {
 	public static void partitioning() {
 		Stream<String> animals = Stream.of("Lion", "Donkey", "Monkey");
 		Map<Boolean, List<String>> map = animals.collect(Collectors.partitioningBy(animal -> animal.endsWith("key")));
+		System.out.println(map);
+	}
+
+	public static void countingWhenCollecting() {
+		Stream<String> animals = Stream.of("Lion", "Donkey", "Monkey");
+		Map<Integer, Long> map = animals.collect(Collectors.groupingBy(String::length, Collectors.counting()));
+		System.out.println(map);
+	}
+
+	public static void mappingWhenCollecting() {
+		Stream<String> animals = Stream.of("Lion", "Donkey", "Monkey");
+		Map<Integer, Optional<Character>> map = animals.collect(Collectors.groupingBy(String::length,
+				Collectors.mapping(s -> s.charAt(0), Collectors.minBy(Comparator.naturalOrder()))));
 		System.out.println(map);
 	}
 }
