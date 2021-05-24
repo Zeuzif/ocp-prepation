@@ -1,8 +1,12 @@
 package me.wassif.streams.terminal;
 
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 import java.util.Set;
 import java.util.TreeSet;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -30,6 +34,13 @@ public class TerminalOps {
 		collect1();
 		// using collector
 		collect2();
+		// using to map
+		toMap();
+		toMap2();
+		// using group
+		group();
+		// using partition
+		partitioning();
 	}
 
 	// take binary operator
@@ -51,5 +62,31 @@ public class TerminalOps {
 		Stream<String> letters = Stream.of("w", "a", "s", "s", "i", "f");
 		Set<String> set = letters.collect(Collectors.toCollection(TreeSet::new));
 		System.out.println(set);
+	}
+
+	private static void toMap() {
+		Stream<String> animals = Stream.of("Lion","Donkey","Monkey");
+		Map<String, Integer> map = animals.collect(Collectors.toMap(Function.identity(), String::length));
+		map.forEach((k, v) -> System.out.println(k + " = " + v));
+	}
+
+	public static void toMap2() {
+		Stream<String> animals = Stream.of("Lion","Donkey","Monkey");
+		Map<Integer, String> map = animals
+				.collect(Collectors.toMap(String::length, Function.identity(), (s1, s2) -> String.join(",", s1, s2),
+						HashMap::new));
+		map.forEach((k, v) -> System.out.println(k + " = " + v));
+	}
+
+	public static void group() {
+		Stream<String> animals = Stream.of("Lion", "Donkey", "Monkey");
+		Map<Integer, List<String>> map = animals.collect(Collectors.groupingBy(String::length));
+		System.out.println(map);
+	}
+
+	public static void partitioning() {
+		Stream<String> animals = Stream.of("Lion", "Donkey", "Monkey");
+		Map<Boolean, List<String>> map = animals.collect(Collectors.partitioningBy(animal -> animal.endsWith("key")));
+		System.out.println(map);
 	}
 }

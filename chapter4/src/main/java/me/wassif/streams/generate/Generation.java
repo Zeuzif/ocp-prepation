@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.stream.Stream;
 
 public class Generation {
+	@SuppressWarnings("unused")
 	public static void main(String[] args) {
 		Stream<String> emptyStm = Stream.empty();
 		Stream<Integer> stmFromArray = Stream.of(1, 2, 3);
