@@ -1,4 +1,4 @@
-package me.wassif;
+package me.wassif.exceptions;
 
 import java.io.IOException;
 import java.nio.file.Files;
