@@ -28,3 +28,21 @@ public class CustomException extends Exception {
 		}
 	}
 }
+
+abstract class Human {
+	abstract public void eat() throws CustomException;
+
+	abstract public void run() throws Exception;
+}
+
+class Person extends Human {
+	// not throw at all
+	@Override
+	public void eat() {
+	}
+
+	// throw a more specific
+	@Override
+	public void run() throws CustomException {
+	}
+}
