@@ -1,4 +1,4 @@
-### Exceptions
+#### Exceptions
 - Java checks the catch blocks in the order in which they appear. It is illegal to declare
 a subclass exception in a catch block that is lower down in the list than a superclass
 exception because it will be unreachable code.
@@ -19,4 +19,27 @@ runs before any programmer-coded ones.\
 an overriding method is allowed to declare more specific exceptions than the parent or even none at all.
 
 Suppressed Exceptions:\
+When multiple exceptions are thrown, all but
+the first are called suppressed exceptions. The idea is that Java treats the first exception as
+the primary one and tacks on any that come up while automatically closing
+
+#### Assertions:
+An assertion is a Boolean expression that you place at a point in your code where you
+expect something to be true.\
+an assertion is a shorter/better way of writing the
+following:
+```
+if (!boolean_expression) throw new AssertionError();
+```
+how assertions are used: 
+- Internal Invariants: You assert that a value is within a certain constraint.
+- Class Invariants You assert the validity of an object’s state. Class invariants are typically
+private methods within the class that return a boolean
+- Control Flow Invariants You assert that a line of code you assume is unreachable is never
+reached
+- Preconditions You assert that certain conditions are met before a method is invoked.
+- Post Conditions You assert that certain conditions are met after a method executes
+successfully.
+
+
 
