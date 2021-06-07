@@ -18,5 +18,5 @@ new PrintData().run();
 (new Thread(new PrintData())).run();
 (new ReadInventoryThread()).run();
 ```
-Ho to resolve Ambiguous Lambda Expressions: Callable vs. Supplier\
+How to resolve Ambiguous Lambda Expressions: Callable vs. Supplier\
 we can add an explicit cast.
