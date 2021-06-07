@@ -1,4 +1,4 @@
-package me.wassif;
+package me.wassif.concurrency;
 
 class PrintData implements Runnable {
 	@Override

@@ -9,12 +9,14 @@ A thread can complete multiple independent tasks but only one task at a time.\
 *Daemon thread* is one that will not prevent the JVM from exiting when the program finishes
 
 Be careful about cases where a Thread or Runnable is created but no
-start() method is called. While the following code snippets will compile, none will
+`start()` method is called. While the following code snippets will compile, none will
 actually execute a task on a separate processing thread. Instead, the thread that made the
-call will be used to execute the task, causing the thread to wait until each run() method is
+call will be used to execute the task, causing the thread to wait until each `run()` method is
 complete before moving on to the next line
 ```
 new PrintData().run();
 (new Thread(new PrintData())).run();
 (new ReadInventoryThread()).run();
 ```
+Ho to resolve Ambiguous Lambda Expressions: Callable vs. Supplier\
+we can add an explicit cast.
