@@ -20,3 +20,12 @@ new PrintData().run();
 ```
 How to resolve Ambiguous Lambda Expressions: Callable vs. Supplier\
 we can add an explicit cast.
+
+Thread Pool:
+| method | return type|
+|--------|------------|
+|newSingleThreadExecutor()| ExecutorService|
+|newSingleThreadScheduledExecutor()| ScheduledExecutorService|
+|newCachedThreadPool()|ExecutorService|
+|newFixedThreadPool(int nThreads)|ExecutorService|
+|newScheduledThreadPool(int nThreads)|ScheduledExecutorService|
