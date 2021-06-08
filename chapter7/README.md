@@ -29,3 +29,8 @@ Thread Pool:
 |newCachedThreadPool()|ExecutorService|
 |newFixedThreadPool(int nThreads)|ExecutorService|
 |newScheduledThreadPool(int nThreads)|ScheduledExecutorService|
+
+Concurrent collections:
+
+Using parallel streams:\
+Avoiding Stateful Operations when using parallel streams.
