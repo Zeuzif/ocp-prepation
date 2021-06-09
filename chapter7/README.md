@@ -31,6 +31,15 @@ Thread Pool:
 |newScheduledThreadPool(int nThreads)|ScheduledExecutorService|
 
 Concurrent collections:
+(To do)
 
 Using parallel streams:\
 Avoiding Stateful Operations when using parallel streams.
+
+Manage concurrent process:\
+- using `CyclicBarrier` object to synchronize threads. When using CyclicBarrier with pool make sure that you set the number of available threads to be at least as large as your CyclicBarrier limit value.
+
+- using fork/join framework that requires three steps:
+1- create ForkJoinTask
+2- create ForkJoinPool
+3- start ForkJoinTask
