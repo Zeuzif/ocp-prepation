@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="src" path="chapter1/src/main/java"/>
-	<classpathentry kind="src" path="chapter7/src/main/java"/>
-	<classpathentry kind="src" path="chapter6/src/main/java"/>
-	<classpathentry kind="src" path="chapter5/src/main/resources"/>
-	<classpathentry kind="src" path="chapter5/src/main/java"/>
-	<classpathentry kind="src" path="chapter4/src/main/java"/>
 	<classpathentry kind="src" path="chapter2/src/main/java"/>
 	<classpathentry kind="src" path="chapter3/src/main/java"/>
+	<classpathentry kind="src" path="chapter4/src/main/java"/>
+	<classpathentry kind="src" path="chapter5/src/main/java"/>
+	<classpathentry kind="src" path="chapter5/src/main/resources"/>
+	<classpathentry kind="src" path="chapter6/src/main/java"/>
+	<classpathentry kind="src" path="chapter7/src/main/java"/>
+	<classpathentry kind="src" path="chapter8/src/main/java"/>
+	<classpathentry including="mark_stream.txt" kind="src" path="chapter8/src/main/resources"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER">
 		<attributes>
 			<attribute name="module" value="true"/>

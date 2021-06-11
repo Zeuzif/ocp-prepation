@@ -11,3 +11,4 @@ For each chapter, notes will be found in readme related to this chapter
 #### chapter 5 : Dates, Strings,and Localization
 #### chapter 6 : Exceptions and Assertions
 #### chapter 7 : Concurrency
+#### chapter 8 : IO
