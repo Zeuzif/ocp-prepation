@@ -10,5 +10,7 @@ public class Main {
 		Path relativePath = path3.relativize(path4);
 		System.out.println(relativePath);
 		System.out.println(path3.resolve(relativePath));
+		Path path = Paths.get("/zoo/animals/bear/koala/food.txt");
+		System.out.println(path.subpath(1, 3).getName(1).toAbsolutePath());
 	}
 }
