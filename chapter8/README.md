@@ -19,6 +19,8 @@ The java.io stream class:\
 - InputStreamReader, OutputStreamWriter
 - PrintStream, PrintWriter
 
+![io types](etc\io_types.png)
+
 Commons ops on streams:
 - close
 - flush
@@ -30,3 +32,4 @@ Important: constructor and any default
 initializations are ignored during the deserialization process.
 
 PrintWriter and PrintStream:\
+
