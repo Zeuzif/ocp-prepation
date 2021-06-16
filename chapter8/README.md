@@ -19,7 +19,7 @@ The java.io stream class:\
 - InputStreamReader, OutputStreamWriter
 - PrintStream, PrintWriter
 
-![io types](etc\io_types.png)
+![io types](etc/io_types.png)
 
 Commons ops on streams:
 - close
